@@ -71,6 +71,11 @@
     .btn:hover{background:var(--terracota-escuro);transform:translateY(-2px);box-shadow:0 12px 28px rgba(217,123,84,.45)}
     .btn small{display:block;font-weight:600;font-size:13px;opacity:.9;margin-top:2px}
 
+    /* ---------- Faixa de aviso ---------- */
+    .aviso-topo{display:block;background:var(--pessego);color:var(--verde-escuro);text-align:center;
+                font-size:14px;padding:9px 16px;text-decoration:none;font-weight:600}
+    .aviso-topo:hover{background:#F5AE6A}
+
     /* ---------- Barra superior ---------- */
     .topo{position:sticky;top:0;z-index:50;background:rgba(250,246,241,.92);backdrop-filter:blur(8px);
           border-bottom:1px solid rgba(61,69,46,.08)}
@@ -231,6 +236,9 @@
   </style>
 </head>
 <body>
+
+  <!-- ===== FAIXA DE AVISO ===== -->
+  <a class="aviso-topo" href="#aula-gratis">🎁 <strong>Novidade:</strong> aula gratuita de introdução alimentar em breve — entre na lista de espera →</a>
 
   <!-- ===== BARRA SUPERIOR ===== -->
   <header class="topo">
@@ -548,7 +556,7 @@
           <div class="campos">
             <input type="text" name="entry.292821919" placeholder="Seu nome" required aria-label="Seu nome">
             <input type="email" name="entry.904373471" placeholder="Seu melhor e-mail" required aria-label="Seu melhor e-mail">
-            <input type="tel" name="entry.1948208230" placeholder="WhatsApp com DDD (opcional)" aria-label="WhatsApp com DDD (opcional)">
+            <input type="tel" name="entry.1948208230" placeholder="WhatsApp com DDD" required aria-label="WhatsApp com DDD">
           </div>
           <label class="consentimento">
             <input type="checkbox" required>
