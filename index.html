@@ -12,16 +12,16 @@
        ============================================================ -->
   <meta name="robots" content="noindex">
 
-  <title>Introdução Alimentar para Bebês de 6 a 24 Meses | Nutrir para Crescer — Nutri Cibely Ito</title>
-  <meta name="description" content="Guia completo de introdução alimentar: seu bebê comendo de tudo, sem medo de engasgo. Passo a passo da nutricionista materno-infantil Cibely Ito, dos 6 meses aos 2 anos. Garantia de 7 dias.">
+  <title>Introdução Alimentar para Bebês | Nutrir para Crescer — Nutri Cibely Ito</title>
+  <meta name="description" content="Guia completo de introdução alimentar: seu bebê comendo de tudo, sem medo de engasgo. Passo a passo da nutricionista materno-infantil Cibely Ito para mães de bebês de até 1 ano. Garantia de 7 dias.">
   <link rel="canonical" href="https://nutrirparacrescer.com.br/">
 
   <!-- Compartilhamento em WhatsApp / Instagram / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Nutrir para Crescer">
-  <meta property="og:title" content="Introdução Alimentar para Bebês de 6 a 24 Meses — Nutrir para Crescer">
-  <meta property="og:description" content="Seu bebê comendo de tudo, sem medo de engasgo. Passo a passo completo da nutricionista Cibely Ito, dos 6 meses aos 2 anos.">
+  <meta property="og:title" content="Introdução Alimentar para Bebês — Nutrir para Crescer">
+  <meta property="og:description" content="Seu bebê comendo de tudo, sem medo de engasgo. Passo a passo completo da nutricionista Cibely Ito para mães de bebês de até 1 ano.">
   <meta property="og:url" content="https://nutrirparacrescer.com.br/">
   <!-- TODO: substituir pela imagem oficial de compartilhamento (1200x630px) -->
   <meta property="og:image" content="https://nutrirparacrescer.com.br/og-image.jpg">
@@ -39,7 +39,7 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type":"Question","name":"Meu bebê já passou dos 6 meses. O guia ainda serve para mim?","acceptedAnswer":{"@type":"Answer","text":"Sim! O guia cobre dos 6 aos 24 meses, organizado por fases (6–9, 9–12 e 12–18 meses). Você começa direto na fase do seu bebê e ainda pode revisar as anteriores."}},
+      {"@type":"Question","name":"Meu bebê já passou dos 6 meses. O guia ainda serve para mim?","acceptedAnswer":{"@type":"Answer","text":"Sim! O guia é ideal para mães de bebês de até 1 ano, organizado por fases. Você começa direto na fase do seu bebê e ainda pode revisar as anteriores."}},
       {"@type":"Question","name":"Funciona para quem mora fora do Brasil?","acceptedAnswer":{"@type":"Answer","text":"Sim. O método ensina os princípios por grupos alimentares, então você aprende a substituir os alimentos pelos disponíveis no seu país. Muitas alunas moram fora do Brasil."}},
       {"@type":"Question","name":"Quanto tempo terei acesso?","acceptedAnswer":{"@type":"Answer","text":"O acesso é de 6 meses, com possibilidade de renovação da matrícula ao final do período."}},
       {"@type":"Question","name":"Como é o acesso às aulas?","acceptedAnswer":{"@type":"Answer","text":"Pela plataforma Hotmart, em qualquer dispositivo (TV, celular ou tablet), em qualquer lugar e a qualquer hora. Todas as aulas já estão disponíveis."}},
@@ -101,9 +101,7 @@
     .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
     .chip{background:var(--branco);border:1px solid rgba(61,69,46,.12);border-radius:999px;
           font-size:14px;font-weight:700;color:var(--verde-escuro);padding:8px 16px}
-    .foto-hero{background:linear-gradient(160deg,var(--verde) 0%,var(--rosa) 100%);border-radius:var(--raio);
-               aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;color:#fff;
-               font-weight:700;text-align:center;padding:24px;box-shadow:var(--sombra);font-size:15px}
+    .foto-hero{width:100%;border-radius:var(--raio);box-shadow:var(--sombra);object-fit:cover;aspect-ratio:4/4.2}
 
     /* ---------- Seções genéricas ---------- */
     .titulo-secao{text-align:center;max-width:720px;margin:0 auto 48px}
@@ -117,6 +115,10 @@
     .card .icone{font-size:34px;margin-bottom:12px}
     .card h3{font-size:20px;margin-bottom:8px}
     .card p{font-size:15.5px;color:var(--texto-suave)}
+    .card-destaque{margin-top:20px;display:flex;gap:18px;align-items:flex-start;
+                   border:2px solid var(--terracota);background:#FFF8F1}
+    .card-destaque .icone{margin-bottom:0}
+    .card-destaque h3{color:var(--terracota-escuro)}
 
     /* ---------- Dores / perguntas ---------- */
     .duvidas{max-width:680px;margin:0 auto}
@@ -141,15 +143,17 @@
     .bonus{background:var(--branco);border-radius:var(--raio);padding:26px;box-shadow:var(--sombra);position:relative}
     .bonus .num{position:absolute;top:-14px;left:22px;background:var(--pessego);color:var(--verde-escuro);
                 font-weight:800;font-size:14px;padding:4px 14px;border-radius:999px}
+    .bonus img{width:100%;border-radius:10px;margin:8px 0 4px}
     .bonus h3{font-size:18px;margin:10px 0 8px}
     .bonus p{font-size:15px;color:var(--texto-suave)}
     .bonus .valor{display:inline-block;margin-top:10px;font-weight:800;font-size:14px;color:var(--terracota)}
 
-    /* ---------- Depoimentos ---------- */
-    .depo{background:var(--branco);border-radius:var(--raio);padding:26px;box-shadow:var(--sombra)}
-    .depo .estrelas{color:#E9A13B;letter-spacing:2px;margin-bottom:10px}
-    .depo p{font-size:15.5px;font-style:italic;color:var(--texto-suave)}
-    .depo .autora{margin-top:14px;font-weight:800;font-style:normal;color:var(--verde-escuro);font-size:15px}
+    /* ---------- Depoimentos em vídeo ---------- */
+    .videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+    .depo{background:var(--branco);border-radius:var(--raio);padding:16px;box-shadow:var(--sombra)}
+    .video-wrap{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000}
+    .video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .depo .autora{margin-top:12px;font-weight:800;color:var(--verde-escuro);font-size:15px;text-align:center}
 
     /* ---------- Oferta ---------- */
     .oferta{background:var(--verde-escuro);color:#fff}
@@ -166,7 +170,9 @@
     .preco{text-align:center;margin:14px 0 6px}
     .preco .parcelas{font-family:'Fraunces',serif;font-size:clamp(38px,5vw,52px);font-weight:700;color:var(--verde-escuro)}
     .preco .avista{color:var(--texto-suave);font-weight:700}
-    .formas{text-align:center;font-size:14px;color:var(--texto-suave);margin:16px 0 24px}
+    .formas{text-align:center;font-size:14px;color:var(--texto-suave);margin:16px 0 20px}
+    .compare-consulta{background:var(--verde-suave);border-radius:12px;padding:16px 18px;font-size:15px;
+                      color:var(--verde-escuro);margin-bottom:24px}
     .caixa-oferta .btn{display:block;width:100%}
 
     /* ---------- Garantia ---------- */
@@ -177,15 +183,14 @@
 
     /* ---------- Sobre ---------- */
     .sobre .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
-    .foto-sobre{background:linear-gradient(160deg,var(--rosa),var(--pessego));border-radius:var(--raio);
-                aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;color:#fff;
-                font-weight:700;text-align:center;padding:24px;box-shadow:var(--sombra);font-size:15px}
+    .foto-sobre{width:100%;border-radius:var(--raio);box-shadow:var(--sombra);object-fit:cover;aspect-ratio:4/5}
     .sobre h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:16px}
     .sobre p{margin-bottom:14px;color:var(--texto-suave)}
     .sobre .missao{font-weight:700;color:var(--verde-escuro)}
 
     /* ---------- FAQ ---------- */
     .faq{max-width:760px;margin:0 auto}
+    .mockup-curso{max-width:560px;width:100%;margin:0 auto 36px;display:block}
 
     /* ---------- CTA final + rodapé ---------- */
     .cta-final{text-align:center}
@@ -216,7 +221,7 @@
   <!-- ===== BARRA SUPERIOR ===== -->
   <header class="topo">
     <div class="wrap">
-      <a class="logo" href="#">🌱 Nutrir <span>para</span> Crescer</a>
+      <a class="logo" href="#"><img src="images/logo.png" alt="Nutrir para Crescer" style="height:44px;width:auto"></a>
       <a class="btn" href="#oferta">Quero começar agora</a>
     </div>
   </header>
@@ -225,19 +230,17 @@
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="selo">Guia completo · dos 6 meses aos 2 anos</span>
+        <span class="selo">Guia completo · para mães de bebês de até 1 ano</span>
         <h1>Seu bebê comendo de tudo, <em>sem medo de engasgo</em> e sem brigas na hora da refeição</h1>
-        <p class="sub">O passo a passo completo de introdução alimentar da nutricionista materno-infantil <strong>Cibely Ito</strong> — para você conduzir essa fase com segurança, praticidade e leveza, do primeiro papá aos 2 anos.</p>
+        <p class="sub">O passo a passo completo de introdução alimentar da nutricionista materno-infantil <strong>Cibely Ito</strong> — para você conduzir essa fase com segurança, praticidade e leveza.</p>
         <a class="btn" href="#oferta">Quero começar agora<small>12x de R$19,70 · garantia de 7 dias</small></a>
         <div class="chips">
-          <span class="chip">👩‍⚕️ Nutricionista há mais de 15 anos</span>
+          <span class="chip">👩‍⚕️ Nutricionista há mais de 17 anos</span>
           <span class="chip">🎬 Aulas curtas e legendadas</span>
           <span class="chip">🛡️ 7 dias de garantia</span>
         </div>
       </div>
-      <div class="foto-hero" role="img" aria-label="Foto da nutricionista Cibely Ito">
-        [ FOTO DA CIBELY<br>ou de bebê comendo —<br>enviar imagem ]
-      </div>
+      <img class="foto-hero" src="images/mae-bebe.webp" alt="Mãe oferecendo comida ao bebê durante a introdução alimentar">
     </div>
   </section>
 
@@ -246,7 +249,7 @@
     <div class="wrap">
       <div class="titulo-secao">
         <h2>Feito para você que quer acertar desde a primeira colherada</h2>
-        <p>Se você se reconhece em alguma dessas situações, este guia foi pensado para você:</p>
+        <p>Ideal para mães de bebês de até 1 ano. Se você se reconhece em alguma dessas situações, este guia foi pensado para você:</p>
       </div>
       <div class="cards">
         <div class="card">
@@ -268,6 +271,13 @@
           <div class="icone">🌍</div>
           <h3>Para quem mora fora do Brasil</h3>
           <p>Aprenda a substituir alimentos e conduzir a introdução alimentar longe da família, com suporte.</p>
+        </div>
+      </div>
+      <div class="card card-destaque">
+        <div class="icone">✨</div>
+        <div>
+          <h3>E principalmente: para a mãe que quer aprender</h3>
+          <p>Você não precisa estar perdida para estar aqui. Se você se interessa, pesquisa e quer fazer o melhor pelo seu bebê desde já, este guia entrega o caminho completo — organizado por quem estudou tudo isso por você.</p>
         </div>
       </div>
     </div>
@@ -296,6 +306,7 @@
         <h2>O Guia Introdução Alimentar Sem Segredos</h2>
         <p>Aulas objetivas e legendadas, organizadas por fases, para assistir no seu ritmo — pensadas para mães que têm pouco tempo. Acompanha e-book de apoio com mais de 60 páginas, com tabelas e imagens.</p>
       </div>
+      <img class="mockup-curso" src="images/cibely-aula.png" alt="Aula do curso Introdução Alimentar Sem Segredos com a nutricionista Cibely Ito">
       <div class="faq">
         <details>
           <summary>Módulo 1 · Introdução</summary>
@@ -333,21 +344,25 @@
       </div>
       <div class="bonus-grid">
         <div class="bonus"><span class="num">Bônus 1</span>
+          <img src="images/amanda-aula.png" alt="Aula bônus com Dra. Amanda Teixeira, fisioterapeuta e osteopata">
           <h3>🦴 Aula com osteopata pediátrica</h3>
           <p>Como cuidar da postura e do desenvolvimento do seu bebê durante a alimentação.</p>
           <span class="valor">Valor: R$200</span>
         </div>
         <div class="bonus"><span class="num">Bônus 2</span>
+          <img src="images/camila-aula.png" alt="Aula bônus com Dra. Camila Oliveira, odontopediatra">
           <h3>🦷 Aula com odontopediatra</h3>
           <p>Como cuidar da saúde bucal do seu bebê desde o início.</p>
           <span class="valor">Valor: R$200</span>
         </div>
         <div class="bonus"><span class="num">Bônus 3</span>
+          <img src="images/ebook-lancheira.jpg" alt="Capa do e-book Minha Lancheira, para crianças acima de 1 ano">
           <h3>🥪 E-book "Minha Lancheira"</h3>
           <p>Ideias de lancheiras saudáveis e receitas simples para crianças a partir de 1 ano.</p>
           <span class="valor">Valor: R$47</span>
         </div>
         <div class="bonus"><span class="num">Bônus 4</span>
+          <img src="images/ebook-ia.jpg" alt="Capa do e-book Introdução Alimentar Sem Segredos">
           <h3>📖 E-book "Introdução Alimentar Sem Segredos"</h3>
           <p>Guia completo com mais de 60 páginas, com imagens, gráficos e tabelas de apoio.</p>
           <span class="valor">Valor: R$47</span>
@@ -358,6 +373,7 @@
           <span class="valor">Valor: R$47</span>
         </div>
         <div class="bonus"><span class="num">Bônus 6</span>
+          <img src="images/mockup-cibely-google-meet.png" alt="Encontro mensal ao vivo com a nutricionista Cibely Ito">
           <h3>💬 Encontros mensais ao vivo + comunidade</h3>
           <p>Encontros mensais para tirar dúvidas diretamente com a Cibely, e grupo fechado para troca entre mães.</p>
           <span class="valor">Inestimável 💚</span>
@@ -372,22 +388,30 @@
       <div class="titulo-secao">
         <h2>O que dizem as mães que já passaram por aqui</h2>
       </div>
-      <div class="cards">
-        <!-- TODO: substituir pelos depoimentos reais (prints/nomes/fotos) -->
+      <div class="videos">
         <div class="depo">
-          <div class="estrelas">★★★★★</div>
-          <p>"[ Depoimento real de aluna — enviar print ou texto ]"</p>
-          <p class="autora">— Nome da mãe, cidade</p>
+          <div class="video-wrap">
+            <iframe src="https://www.youtube-nocookie.com/embed/vsC2ENzrEXM" title="Depoimento de Cecília Natucci, mãe da Olivia" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="autora">Cecília Natucci, mãe da Olivia · Curitiba/PR</p>
         </div>
         <div class="depo">
-          <div class="estrelas">★★★★★</div>
-          <p>"[ Depoimento real de aluna — enviar print ou texto ]"</p>
-          <p class="autora">— Nome da mãe, cidade</p>
+          <div class="video-wrap">
+            <iframe src="https://www.youtube-nocookie.com/embed/Xw06DTG7kVw" title="Depoimento de Lays Gama, mãe do Samuel" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="autora">Lays Gama, mãe do Samuel · Campinas/SP</p>
         </div>
         <div class="depo">
-          <div class="estrelas">★★★★★</div>
-          <p>"[ Depoimento real de aluna — enviar print ou texto ]"</p>
-          <p class="autora">— Nome da mãe, cidade</p>
+          <div class="video-wrap">
+            <iframe src="https://www.youtube-nocookie.com/embed/bWU0Phykgd8" title="Depoimento de Bárbara Falqueto, mãe da Liz" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="autora">Bárbara Falqueto, mãe da Liz · São Paulo/SP</p>
+        </div>
+        <div class="depo">
+          <div class="video-wrap">
+            <iframe src="https://www.youtube-nocookie.com/embed/SI2OwQop8xE" title="Depoimento de Geovana Shibuya, mãe da Elis" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="autora">Geovana Shibuya, mãe da Elis · Foz do Iguaçu/PR</p>
         </div>
       </div>
     </div>
@@ -415,6 +439,9 @@
           <div class="avista">ou R$197 à vista</div>
         </div>
         <p class="formas">💳 Cartão em até 12x &nbsp;·&nbsp; ⚡ PIX &nbsp;·&nbsp; 📋 Parcelex</p>
+        <div class="compare-consulta">
+          <strong>💡 Para você comparar:</strong> uma consulta individual com a Cibely custa <strong>R$400</strong>. No guia, você recebe o método completo dela, com 6 meses de acesso e encontros mensais ao vivo, por <strong>menos da metade disso</strong>.
+        </div>
         <a class="btn" href="https://pay.hotmart.com/L96151487X?off=w4kukd9f&checkoutMode=10">
           Quero começar agora
           <small>Acesso imediato · pagamento 100% seguro pela Hotmart</small>
@@ -437,13 +464,11 @@
   <!-- ===== SOBRE ===== -->
   <section class="fundo-verde sobre" id="sobre">
     <div class="wrap">
-      <div class="foto-sobre" role="img" aria-label="Foto da nutricionista Cibely Ito">
-        [ FOTO PROFISSIONAL<br>DA CIBELY —<br>enviar imagem ]
-      </div>
+      <img class="foto-sobre" src="images/cibely.webp" alt="Cibely Ito, nutricionista materno-infantil">
       <div>
         <h2>Quem é Cibely Ito</h2>
-        <p>Sou de Maringá (PR), formada em Nutrição em 2007, com duas pós-graduações: Nutrição Clínica e Nutrição Materno-Infantil.</p>
-        <p>Atuo na área há mais de 15 anos, atendendo em clínicas e hospitais, onde tratei diversas comorbidades e distúrbios alimentares. Também trabalhei com nutrição enteral, fórmulas infantis e aleitamento em empresas como Danone e Nestlé.</p>
+        <p>Sou de Maringá (PR), formada em Nutrição em 2007, com duas pós-graduações: Nutrição Clínica e Nutrição Materno-Infantil. Me especializei também em Terapia Alimentar.</p>
+        <p>Atuo na área há mais de 17 anos, atendendo em clínicas e hospitais, onde tratei diversas comorbidades e distúrbios alimentares. Também trabalhei com nutrição enteral, fórmulas infantis especiais e suplementos alimentares, em empresas como Danone e Nestlé.</p>
         <p>Em 2018 me mudei para São Paulo e passei a me dedicar à nutrição comportamental, com especializações em PNL e Constelação Familiar. Acredito que alimentação vai além da clínica: é preciso primeiro acolher, para depois tratar.</p>
         <p class="missao">Minha missão é mudar a relação da nova geração de mães com a nutrição — para que a próxima geração de crianças veja a comida com mais leveza e amor. 🤍</p>
       </div>
@@ -459,7 +484,7 @@
       <div class="faq">
         <details>
           <summary>Meu bebê já passou dos 6 meses. Ainda serve para mim?</summary>
-          <div class="conteudo"><p>Sim! O guia cobre dos 6 aos 24 meses, organizado por fases (6–9, 9–12 e 12–18 meses). Você começa direto na fase do seu bebê e ainda pode revisar as anteriores.</p></div>
+          <div class="conteudo"><p>Sim! O guia é ideal para mães de bebês de até 1 ano, organizado por fases. Você começa direto na fase do seu bebê e ainda pode revisar as anteriores.</p></div>
         </details>
         <details>
           <summary>Funciona para quem mora fora do Brasil?</summary>
@@ -497,7 +522,7 @@
   <section class="fundo-verde cta-final">
     <div class="wrap">
       <h2>A introdução alimentar do seu bebê acontece uma única vez.</h2>
-      <p>Conduza essa fase com segurança, sem medo e com o apoio de quem entende — do primeiro papá aos 2 anos.</p>
+      <p>Conduza essa fase com segurança, sem medo e com o apoio de quem entende.</p>
       <a class="btn" href="https://pay.hotmart.com/L96151487X?off=w4kukd9f&checkoutMode=10">
         Quero começar agora
         <small>12x de R$19,70 · garantia incondicional de 7 dias</small>
