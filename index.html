@@ -2,25 +2,521 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nutrir para Crescer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <!-- ============================================================
+       ATENÇÃO (fase de teste):
+       A linha "noindex" abaixo impede o Google de indexar esta
+       versão de teste. REMOVER esta linha quando o site for para
+       o domínio oficial nutrirparacrescer.com.br.
+       ============================================================ -->
+  <meta name="robots" content="noindex">
+
+  <title>Introdução Alimentar para Bebês de 6 a 24 Meses | Nutrir para Crescer — Nutri Cibely Ito</title>
+  <meta name="description" content="Guia completo de introdução alimentar: seu bebê comendo de tudo, sem medo de engasgo. Passo a passo da nutricionista materno-infantil Cibely Ito, dos 6 meses aos 2 anos. Garantia de 7 dias.">
+  <link rel="canonical" href="https://nutrirparacrescer.com.br/">
+
+  <!-- Compartilhamento em WhatsApp / Instagram / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Nutrir para Crescer">
+  <meta property="og:title" content="Introdução Alimentar para Bebês de 6 a 24 Meses — Nutrir para Crescer">
+  <meta property="og:description" content="Seu bebê comendo de tudo, sem medo de engasgo. Passo a passo completo da nutricionista Cibely Ito, dos 6 meses aos 2 anos.">
+  <meta property="og:url" content="https://nutrirparacrescer.com.br/">
+  <!-- TODO: substituir pela imagem oficial de compartilhamento (1200x630px) -->
+  <meta property="og:image" content="https://nutrirparacrescer.com.br/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Dados estruturados: FAQ (aparece direto nos resultados do Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Meu bebê já passou dos 6 meses. O guia ainda serve para mim?","acceptedAnswer":{"@type":"Answer","text":"Sim! O guia cobre dos 6 aos 24 meses, organizado por fases (6–9, 9–12 e 12–18 meses). Você começa direto na fase do seu bebê e ainda pode revisar as anteriores."}},
+      {"@type":"Question","name":"Funciona para quem mora fora do Brasil?","acceptedAnswer":{"@type":"Answer","text":"Sim. O método ensina os princípios por grupos alimentares, então você aprende a substituir os alimentos pelos disponíveis no seu país. Muitas alunas moram fora do Brasil."}},
+      {"@type":"Question","name":"Quanto tempo terei acesso?","acceptedAnswer":{"@type":"Answer","text":"O acesso é de 6 meses, com possibilidade de renovação da matrícula ao final do período."}},
+      {"@type":"Question","name":"Como é o acesso às aulas?","acceptedAnswer":{"@type":"Answer","text":"Pela plataforma Hotmart, em qualquer dispositivo (TV, celular ou tablet), em qualquer lugar e a qualquer hora. Todas as aulas já estão disponíveis."}},
+      {"@type":"Question","name":"Tenho garantia?","acceptedAnswer":{"@type":"Answer","text":"Sim, garantia incondicional de 7 dias corridos após a inscrição. Basta solicitar o reembolso, que será feito sem questionamentos."}},
+      {"@type":"Question","name":"Quais as formas de pagamento?","acceptedAnswer":{"@type":"Answer","text":"PIX, cartão de crédito em até 12x de R$19,70 (ou R$197 à vista) e financiamento Parcelex."}}
+    ]
+  }
+  </script>
+
   <style>
-    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-           background:#f7f4ef; color:#3a3a3a; display:flex; min-height:100vh;
-           align-items:center; justify-content:center; text-align:center; }
-    .card { background:#fff; padding:48px 40px; border-radius:16px;
-            box-shadow:0 10px 40px rgba(0,0,0,.08); max-width:520px; margin:20px; }
-    h1 { color:#7aa22e; margin:0 0 12px; font-size:28px; }
-    p { line-height:1.6; font-size:17px; }
-    .tag { display:inline-block; background:#eef3e1; color:#5f7d1f;
-           padding:6px 14px; border-radius:999px; font-size:13px; margin-top:18px; }
+    :root{
+      --verde:#8FB489;        /* verde-sálvia da marca, levemente aprofundado */
+      --verde-escuro:#3D452E; /* oliva escuro — textos e fundos de contraste */
+      --verde-suave:#EBF2E9;  /* verde bem claro para fundos de seção */
+      --creme:#FAF6F1;        /* fundo principal, quente e acolhedor */
+      --pessego:#FFBC7D;      /* destaque suave */
+      --terracota:#D97B54;    /* botões de ação (CTA) */
+      --terracota-escuro:#C4663F;
+      --rosa:#D8A292;
+      --texto:#3A4132;
+      --texto-suave:#6B7261;
+      --branco:#FFFFFF;
+      --sombra:0 12px 40px rgba(61,69,46,.10);
+      --raio:18px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Nunito Sans',system-ui,sans-serif;background:var(--creme);color:var(--texto);line-height:1.65;font-size:17px}
+    h1,h2,h3{font-family:'Fraunces',Georgia,serif;color:var(--verde-escuro);line-height:1.2;font-weight:600}
+    img{max-width:100%;display:block}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+    section{padding:72px 0}
+
+    /* ---------- Botão principal (CTA) ---------- */
+    .btn{display:inline-block;background:var(--terracota);color:#fff;font-weight:800;font-size:18px;
+         padding:18px 40px;border-radius:999px;text-decoration:none;text-align:center;
+         box-shadow:0 8px 24px rgba(217,123,84,.35);transition:transform .15s,box-shadow .15s,background .15s}
+    .btn:hover{background:var(--terracota-escuro);transform:translateY(-2px);box-shadow:0 12px 28px rgba(217,123,84,.45)}
+    .btn small{display:block;font-weight:600;font-size:13px;opacity:.9;margin-top:2px}
+
+    /* ---------- Barra superior ---------- */
+    .topo{position:sticky;top:0;z-index:50;background:rgba(250,246,241,.92);backdrop-filter:blur(8px);
+          border-bottom:1px solid rgba(61,69,46,.08)}
+    .topo .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+    .logo{font-family:'Fraunces',serif;font-weight:700;font-size:20px;color:var(--verde-escuro);text-decoration:none}
+    .logo span{color:var(--terracota)}
+    .topo .btn{padding:10px 22px;font-size:15px;box-shadow:none}
+
+    /* ---------- Hero ---------- */
+    .hero{padding:64px 0 72px;background:
+      radial-gradient(ellipse at 85% 15%,rgba(168,196,162,.35),transparent 55%),
+      radial-gradient(ellipse at 10% 90%,rgba(255,188,125,.25),transparent 50%),var(--creme)}
+    .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+    .selo{display:inline-block;background:var(--verde-suave);color:var(--verde-escuro);border:1px solid rgba(61,69,46,.15);
+          font-weight:700;font-size:14px;padding:7px 16px;border-radius:999px;margin-bottom:20px}
+    .hero h1{font-size:clamp(32px,4.6vw,50px);margin-bottom:18px}
+    .hero h1 em{font-style:normal;color:var(--terracota)}
+    .hero p.sub{font-size:19px;color:var(--texto-suave);margin-bottom:28px;max-width:52ch}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+    .chip{background:var(--branco);border:1px solid rgba(61,69,46,.12);border-radius:999px;
+          font-size:14px;font-weight:700;color:var(--verde-escuro);padding:8px 16px}
+    .foto-hero{background:linear-gradient(160deg,var(--verde) 0%,var(--rosa) 100%);border-radius:var(--raio);
+               aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;color:#fff;
+               font-weight:700;text-align:center;padding:24px;box-shadow:var(--sombra);font-size:15px}
+
+    /* ---------- Seções genéricas ---------- */
+    .titulo-secao{text-align:center;max-width:720px;margin:0 auto 48px}
+    .titulo-secao h2{font-size:clamp(26px,3.4vw,38px);margin-bottom:12px}
+    .titulo-secao p{color:var(--texto-suave);font-size:18px}
+
+    /* ---------- Para quem é ---------- */
+    .fundo-verde{background:var(--verde-suave)}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+    .card{background:var(--branco);border-radius:var(--raio);padding:28px;box-shadow:var(--sombra)}
+    .card .icone{font-size:34px;margin-bottom:12px}
+    .card h3{font-size:20px;margin-bottom:8px}
+    .card p{font-size:15.5px;color:var(--texto-suave)}
+
+    /* ---------- Dores / perguntas ---------- */
+    .duvidas{max-width:680px;margin:0 auto}
+    .duvidas li{list-style:none;background:var(--branco);border-radius:14px;padding:16px 20px 16px 52px;
+                margin-bottom:12px;box-shadow:var(--sombra);position:relative;font-weight:600}
+    .duvidas li::before{content:"🤍";position:absolute;left:18px;top:15px}
+    .ponte{text-align:center;font-size:19px;max-width:56ch;margin:36px auto 0;color:var(--verde-escuro);font-weight:700}
+
+    /* ---------- Módulos (acordeão) ---------- */
+    details{background:var(--branco);border-radius:14px;box-shadow:var(--sombra);margin-bottom:12px;overflow:hidden}
+    details summary{cursor:pointer;padding:18px 22px;font-weight:800;font-size:17px;color:var(--verde-escuro);
+                    list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:'Nunito Sans',sans-serif}
+    details summary::-webkit-details-marker{display:none}
+    details summary::after{content:"+";font-size:24px;color:var(--terracota);font-weight:400;transition:transform .2s;flex-shrink:0;margin-left:12px}
+    details[open] summary::after{transform:rotate(45deg)}
+    details .conteudo{padding:0 22px 18px;color:var(--texto-suave);font-size:15.5px}
+    details .conteudo ul{padding-left:20px}
+    details .conteudo li{margin-bottom:4px}
+
+    /* ---------- Bônus ---------- */
+    .bonus-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;padding-top:14px}
+    .bonus{background:var(--branco);border-radius:var(--raio);padding:26px;box-shadow:var(--sombra);position:relative}
+    .bonus .num{position:absolute;top:-14px;left:22px;background:var(--pessego);color:var(--verde-escuro);
+                font-weight:800;font-size:14px;padding:4px 14px;border-radius:999px}
+    .bonus h3{font-size:18px;margin:10px 0 8px}
+    .bonus p{font-size:15px;color:var(--texto-suave)}
+    .bonus .valor{display:inline-block;margin-top:10px;font-weight:800;font-size:14px;color:var(--terracota)}
+
+    /* ---------- Depoimentos ---------- */
+    .depo{background:var(--branco);border-radius:var(--raio);padding:26px;box-shadow:var(--sombra)}
+    .depo .estrelas{color:#E9A13B;letter-spacing:2px;margin-bottom:10px}
+    .depo p{font-size:15.5px;font-style:italic;color:var(--texto-suave)}
+    .depo .autora{margin-top:14px;font-weight:800;font-style:normal;color:var(--verde-escuro);font-size:15px}
+
+    /* ---------- Oferta ---------- */
+    .oferta{background:var(--verde-escuro);color:#fff}
+    .oferta .titulo-secao h2{color:#fff}
+    .oferta .titulo-secao p{color:rgba(255,255,255,.75)}
+    .caixa-oferta{background:var(--branco);color:var(--texto);border-radius:24px;max-width:640px;margin:0 auto;
+                  padding:40px;box-shadow:0 24px 60px rgba(0,0,0,.25)}
+    .caixa-oferta ul{list-style:none;margin-bottom:24px}
+    .caixa-oferta li{padding:10px 0 10px 34px;position:relative;border-bottom:1px dashed rgba(61,69,46,.15);font-size:16px}
+    .caixa-oferta li::before{content:"✓";position:absolute;left:4px;color:var(--verde);font-weight:800}
+    .caixa-oferta li strong{float:right;color:var(--texto-suave);font-weight:700;font-size:15px}
+    .total-riscado{text-align:center;font-size:17px;color:var(--texto-suave)}
+    .total-riscado s{color:#B85C5C}
+    .preco{text-align:center;margin:14px 0 6px}
+    .preco .parcelas{font-family:'Fraunces',serif;font-size:clamp(38px,5vw,52px);font-weight:700;color:var(--verde-escuro)}
+    .preco .avista{color:var(--texto-suave);font-weight:700}
+    .formas{text-align:center;font-size:14px;color:var(--texto-suave);margin:16px 0 24px}
+    .caixa-oferta .btn{display:block;width:100%}
+
+    /* ---------- Garantia ---------- */
+    .garantia .wrap{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;max-width:820px}
+    .garantia .selo-g{font-size:84px}
+    .garantia h2{font-size:28px;margin-bottom:10px}
+    .garantia p{color:var(--texto-suave)}
+
+    /* ---------- Sobre ---------- */
+    .sobre .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
+    .foto-sobre{background:linear-gradient(160deg,var(--rosa),var(--pessego));border-radius:var(--raio);
+                aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;color:#fff;
+                font-weight:700;text-align:center;padding:24px;box-shadow:var(--sombra);font-size:15px}
+    .sobre h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:16px}
+    .sobre p{margin-bottom:14px;color:var(--texto-suave)}
+    .sobre .missao{font-weight:700;color:var(--verde-escuro)}
+
+    /* ---------- FAQ ---------- */
+    .faq{max-width:760px;margin:0 auto}
+
+    /* ---------- CTA final + rodapé ---------- */
+    .cta-final{text-align:center}
+    .cta-final h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:14px}
+    .cta-final p{color:var(--texto-suave);margin-bottom:28px}
+    footer{background:var(--verde-escuro);color:rgba(255,255,255,.7);padding:32px 0;font-size:14px;text-align:center}
+    footer a{color:rgba(255,255,255,.9)}
+
+    /* ---------- Barra fixa mobile ---------- */
+    .barra-mobile{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;padding:12px 16px;
+                  background:rgba(250,246,241,.95);backdrop-filter:blur(8px);border-top:1px solid rgba(61,69,46,.12)}
+    .barra-mobile .btn{display:block;width:100%;padding:14px;font-size:16px}
+
+    /* ---------- Responsivo ---------- */
+    @media (max-width:860px){
+      section{padding:56px 0}
+      .hero .wrap,.sobre .wrap{grid-template-columns:1fr}
+      .foto-hero{max-width:340px;margin:0 auto;order:-1}
+      .garantia .wrap{grid-template-columns:1fr;text-align:center}
+      .topo .btn{display:none}
+      .barra-mobile{display:block}
+      body{padding-bottom:76px}
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>🌱 Nutrir para Crescer</h1>
-    <p>Página em construção. Estamos preparando algo especial para você e seu bebê.</p>
-    <span class="tag">Versão de teste</span>
+
+  <!-- ===== BARRA SUPERIOR ===== -->
+  <header class="topo">
+    <div class="wrap">
+      <a class="logo" href="#">🌱 Nutrir <span>para</span> Crescer</a>
+      <a class="btn" href="#oferta">Quero começar agora</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="selo">Guia completo · dos 6 meses aos 2 anos</span>
+        <h1>Seu bebê comendo de tudo, <em>sem medo de engasgo</em> e sem brigas na hora da refeição</h1>
+        <p class="sub">O passo a passo completo de introdução alimentar da nutricionista materno-infantil <strong>Cibely Ito</strong> — para você conduzir essa fase com segurança, praticidade e leveza, do primeiro papá aos 2 anos.</p>
+        <a class="btn" href="#oferta">Quero começar agora<small>12x de R$19,70 · garantia de 7 dias</small></a>
+        <div class="chips">
+          <span class="chip">👩‍⚕️ Nutricionista há mais de 15 anos</span>
+          <span class="chip">🎬 Aulas curtas e legendadas</span>
+          <span class="chip">🛡️ 7 dias de garantia</span>
+        </div>
+      </div>
+      <div class="foto-hero" role="img" aria-label="Foto da nutricionista Cibely Ito">
+        [ FOTO DA CIBELY<br>ou de bebê comendo —<br>enviar imagem ]
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARA QUEM É ===== -->
+  <section class="fundo-verde" id="para-quem">
+    <div class="wrap">
+      <div class="titulo-secao">
+        <h2>Feito para você que quer acertar desde a primeira colherada</h2>
+        <p>Se você se reconhece em alguma dessas situações, este guia foi pensado para você:</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="icone">🧭</div>
+          <h3>Para a mãe perdida</h3>
+          <p>Não sabe cozinhar, nem por onde começar, e sente que não tem apoio nessa jornada.</p>
+        </div>
+        <div class="card">
+          <div class="icone">💛</div>
+          <h3>Para a mãe insegura</h3>
+          <p>Tem medo de engasgo, de escolher os alimentos errados ou de o bebê rejeitar a comida.</p>
+        </div>
+        <div class="card">
+          <div class="icone">🌷</div>
+          <h3>Para quem quer fazer diferente</h3>
+          <p>Já viveu a seletividade alimentar na família e não quer que o bebê siga o mesmo caminho.</p>
+        </div>
+        <div class="card">
+          <div class="icone">🌍</div>
+          <h3>Para quem mora fora do Brasil</h3>
+          <p>Aprenda a substituir alimentos e conduzir a introdução alimentar longe da família, com suporte.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DORES ===== -->
+  <section>
+    <div class="wrap">
+      <div class="titulo-secao">
+        <h2>Você já se pegou pensando…</h2>
+      </div>
+      <ul class="duvidas">
+        <li>"Qual o momento certo para começar a introdução alimentar?"</li>
+        <li>"Como oferecer os alimentos de forma segura para evitar engasgos?"</li>
+        <li>"Quais alimentos escolher primeiro e como prepará-los corretamente?"</li>
+        <li>"Como garantir que meu bebê coma de tudo e evite a seletividade no futuro?"</li>
+      </ul>
+      <p class="ponte">Essas dúvidas são normais — e têm resposta. Eu te guio passo a passo em cada fase. 🤍</p>
+    </div>
+  </section>
+
+  <!-- ===== O QUE VOCÊ RECEBE / MÓDULOS ===== -->
+  <section class="fundo-verde" id="conteudo">
+    <div class="wrap">
+      <div class="titulo-secao">
+        <h2>O Guia Introdução Alimentar Sem Segredos</h2>
+        <p>Aulas objetivas e legendadas, organizadas por fases, para assistir no seu ritmo — pensadas para mães que têm pouco tempo. Acompanha e-book de apoio com mais de 60 páginas, com tabelas e imagens.</p>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Módulo 1 · Introdução</summary>
+          <div class="conteudo"><ul><li>Boas-vindas e como aproveitar o guia</li><li>Materiais de apoio</li></ul></div>
+        </details>
+        <details>
+          <summary>Módulo 2 · Marcos por fase</summary>
+          <div class="conteudo"><ul><li>6 a 9 meses</li><li>9 a 12 meses</li><li>12 a 18 meses</li></ul></div>
+        </details>
+        <details>
+          <summary>Módulo 3 · Conhecimentos universais</summary>
+          <div class="conteudo"><ul><li>O bebê não engasga? (GAG x engasgo)</li><li>Maneiras de oferecer o alimento</li><li>Como o bebê mastiga?</li><li>Esquema alimentar e primeiros alimentos</li><li>Grupos alimentares e porções do prato</li><li>Gorduras, proteínas, verduras e legumes</li><li>Cortes dos alimentos, utensílios e ambiente</li><li>Água, suco, sal, alergênicos e temperos</li></ul></div>
+        </details>
+        <details>
+          <summary>Módulo 4 · O que não é recomendado</summary>
+          <div class="conteudo"><ul><li>Açúcar e adoçantes</li><li>Industrializados — leitura de rótulo</li><li>Cafeína</li><li>Leite de vaca e derivados</li><li>Mel</li></ul></div>
+        </details>
+        <details>
+          <summary>Módulo 5 · Orientações gerais</summary>
+          <div class="conteudo"><ul><li>Congelamento</li><li>Sujeira</li><li>Doença</li><li>Exames</li></ul></div>
+        </details>
+        <details>
+          <summary>Módulo 6 · Aulas bônus com especialistas</summary>
+          <div class="conteudo"><ul><li>Aula com Dra. Amanda Teixeira — fisioterapeuta e osteopata</li><li>Aula com Dra. Camila Oliveira — odontopediatra</li><li>E-books: Introdução Alimentar Sem Segredos · Minha Lancheira · Receitas da Nutri Cibely</li></ul></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BÔNUS ===== -->
+  <section id="bonus">
+    <div class="wrap">
+      <div class="titulo-secao">
+        <h2>E você ainda leva 6 bônus exclusivos</h2>
+      </div>
+      <div class="bonus-grid">
+        <div class="bonus"><span class="num">Bônus 1</span>
+          <h3>🦴 Aula com osteopata pediátrica</h3>
+          <p>Como cuidar da postura e do desenvolvimento do seu bebê durante a alimentação.</p>
+          <span class="valor">Valor: R$200</span>
+        </div>
+        <div class="bonus"><span class="num">Bônus 2</span>
+          <h3>🦷 Aula com odontopediatra</h3>
+          <p>Como cuidar da saúde bucal do seu bebê desde o início.</p>
+          <span class="valor">Valor: R$200</span>
+        </div>
+        <div class="bonus"><span class="num">Bônus 3</span>
+          <h3>🥪 E-book "Minha Lancheira"</h3>
+          <p>Ideias de lancheiras saudáveis e receitas simples para crianças a partir de 1 ano.</p>
+          <span class="valor">Valor: R$47</span>
+        </div>
+        <div class="bonus"><span class="num">Bônus 4</span>
+          <h3>📖 E-book "Introdução Alimentar Sem Segredos"</h3>
+          <p>Guia completo com mais de 60 páginas, com imagens, gráficos e tabelas de apoio.</p>
+          <span class="valor">Valor: R$47</span>
+        </div>
+        <div class="bonus"><span class="num">Bônus 5</span>
+          <h3>🍲 E-book "Receitas da Nutri Cibely"</h3>
+          <p>Receitas práticas e nutritivas para o dia a dia do seu bebê.</p>
+          <span class="valor">Valor: R$47</span>
+        </div>
+        <div class="bonus"><span class="num">Bônus 6</span>
+          <h3>💬 Encontros mensais ao vivo + comunidade</h3>
+          <p>Encontros mensais para tirar dúvidas diretamente com a Cibely, e grupo fechado para troca entre mães.</p>
+          <span class="valor">Inestimável 💚</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEPOIMENTOS ===== -->
+  <section class="fundo-verde" id="depoimentos">
+    <div class="wrap">
+      <div class="titulo-secao">
+        <h2>O que dizem as mães que já passaram por aqui</h2>
+      </div>
+      <div class="cards">
+        <!-- TODO: substituir pelos depoimentos reais (prints/nomes/fotos) -->
+        <div class="depo">
+          <div class="estrelas">★★★★★</div>
+          <p>"[ Depoimento real de aluna — enviar print ou texto ]"</p>
+          <p class="autora">— Nome da mãe, cidade</p>
+        </div>
+        <div class="depo">
+          <div class="estrelas">★★★★★</div>
+          <p>"[ Depoimento real de aluna — enviar print ou texto ]"</p>
+          <p class="autora">— Nome da mãe, cidade</p>
+        </div>
+        <div class="depo">
+          <div class="estrelas">★★★★★</div>
+          <p>"[ Depoimento real de aluna — enviar print ou texto ]"</p>
+          <p class="autora">— Nome da mãe, cidade</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OFERTA ===== -->
+  <section class="oferta" id="oferta">
+    <div class="wrap">
+      <div class="titulo-secao">
+        <h2>Quanto custa cuidar dessa fase com segurança?</h2>
+        <p>Veja tudo o que está incluído na sua inscrição:</p>
+      </div>
+      <div class="caixa-oferta">
+        <ul>
+          <li>Curso Introdução Alimentar Sem Segredos (6 meses de acesso) <strong>R$597</strong></li>
+          <li>E-book Introdução Alimentar Sem Segredos <strong>R$47</strong></li>
+          <li>Aula bônus com osteopata pediátrica <strong>R$200</strong></li>
+          <li>Aula bônus com odontopediatra <strong>R$200</strong></li>
+          <li>E-book Minha Lancheira <strong>R$47</strong></li>
+          <li>E-book Receitas da Nutri Cibely <strong>R$47</strong></li>
+        </ul>
+        <p class="total-riscado">Valor total: <s>R$1.138</s> — mas hoje você paga apenas:</p>
+        <div class="preco">
+          <div class="parcelas">12x de R$19,70</div>
+          <div class="avista">ou R$197 à vista</div>
+        </div>
+        <p class="formas">💳 Cartão em até 12x &nbsp;·&nbsp; ⚡ PIX &nbsp;·&nbsp; 📋 Parcelex</p>
+        <a class="btn" href="https://pay.hotmart.com/L96151487X?off=w4kukd9f&checkoutMode=10">
+          Quero começar agora
+          <small>Acesso imediato · pagamento 100% seguro pela Hotmart</small>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GARANTIA ===== -->
+  <section class="garantia">
+    <div class="wrap">
+      <div class="selo-g">🛡️</div>
+      <div>
+        <h2>Risco zero: 7 dias de garantia incondicional</h2>
+        <p>Eu confio tanto no meu método que a decisão fica 100% com você: entre, assista às aulas e, se em até 7 dias você achar que o guia não é para você, <strong>eu mesma devolvo cada centavo</strong> — sem complicações e sem perguntas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section class="fundo-verde sobre" id="sobre">
+    <div class="wrap">
+      <div class="foto-sobre" role="img" aria-label="Foto da nutricionista Cibely Ito">
+        [ FOTO PROFISSIONAL<br>DA CIBELY —<br>enviar imagem ]
+      </div>
+      <div>
+        <h2>Quem é Cibely Ito</h2>
+        <p>Sou de Maringá (PR), formada em Nutrição em 2007, com duas pós-graduações: Nutrição Clínica e Nutrição Materno-Infantil.</p>
+        <p>Atuo na área há mais de 15 anos, atendendo em clínicas e hospitais, onde tratei diversas comorbidades e distúrbios alimentares. Também trabalhei com nutrição enteral, fórmulas infantis e aleitamento em empresas como Danone e Nestlé.</p>
+        <p>Em 2018 me mudei para São Paulo e passei a me dedicar à nutrição comportamental, com especializações em PNL e Constelação Familiar. Acredito que alimentação vai além da clínica: é preciso primeiro acolher, para depois tratar.</p>
+        <p class="missao">Minha missão é mudar a relação da nova geração de mães com a nutrição — para que a próxima geração de crianças veja a comida com mais leveza e amor. 🤍</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="titulo-secao">
+        <h2>Perguntas frequentes</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Meu bebê já passou dos 6 meses. Ainda serve para mim?</summary>
+          <div class="conteudo"><p>Sim! O guia cobre dos 6 aos 24 meses, organizado por fases (6–9, 9–12 e 12–18 meses). Você começa direto na fase do seu bebê e ainda pode revisar as anteriores.</p></div>
+        </details>
+        <details>
+          <summary>Funciona para quem mora fora do Brasil?</summary>
+          <div class="conteudo"><p>Sim. O método ensina os princípios por grupos alimentares, então você aprende a substituir os alimentos pelos disponíveis no seu país. Muitas alunas moram fora do Brasil.</p></div>
+        </details>
+        <details>
+          <summary>Quanto tempo terei acesso?</summary>
+          <div class="conteudo"><p>O acesso é de 6 meses. Após esse período, você poderá renovar a matrícula para continuar com o acesso.</p></div>
+        </details>
+        <details>
+          <summary>Todas as aulas já estão disponíveis?</summary>
+          <div class="conteudo"><p>Sim, todas as aulas já estão no ar — você começa hoje mesmo.</p></div>
+        </details>
+        <details>
+          <summary>Como é o acesso?</summary>
+          <div class="conteudo"><p>Pela plataforma Hotmart, em qualquer dispositivo (TV, celular ou tablet), em qualquer lugar e a qualquer hora.</p></div>
+        </details>
+        <details>
+          <summary>Como realizar a compra?</summary>
+          <div class="conteudo"><p>Clique em qualquer botão "Quero começar agora" desta página. Você será direcionada ao checkout seguro da Hotmart, preenche seus dados, realiza o pagamento e recebe o acesso à área de membros por e-mail.</p></div>
+        </details>
+        <details>
+          <summary>Quais as formas de pagamento?</summary>
+          <div class="conteudo"><p>PIX, cartão de crédito em até 12x de R$19,70 (ou R$197 à vista) e financiamento Parcelex.</p></div>
+        </details>
+        <details>
+          <summary>Tenho garantia?</summary>
+          <div class="conteudo"><p>Sim: garantia incondicional de 7 dias corridos após a inscrição. Basta solicitar o reembolso, que será feito sem questionamentos.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="fundo-verde cta-final">
+    <div class="wrap">
+      <h2>A introdução alimentar do seu bebê acontece uma única vez.</h2>
+      <p>Conduza essa fase com segurança, sem medo e com o apoio de quem entende — do primeiro papá aos 2 anos.</p>
+      <a class="btn" href="https://pay.hotmart.com/L96151487X?off=w4kukd9f&checkoutMode=10">
+        Quero começar agora
+        <small>12x de R$19,70 · garantia incondicional de 7 dias</small>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer>
+    <div class="wrap">
+      <p>© 2026 Nutrir para Crescer · Nutricionista Cibely Ito</p>
+      <p><a href="#">Política de Privacidade</a></p><!-- TODO: link real da política -->
+    </div>
+  </footer>
+
+  <!-- Barra de compra fixa no celular -->
+  <div class="barra-mobile">
+    <a class="btn" href="#oferta">Quero começar agora · 12x R$19,70</a>
   </div>
+
 </body>
 </html>
