@@ -411,7 +411,7 @@
   <section class="section">
     <div class="section-label">Curso completo</div>
     <a href="https://nutrirparacrescer.com.br/?utm_source=linkbio&utm_medium=instagram&utm_campaign=curso_ia"
-       class="course-card">
+       class="course-card" data-goatcounter-click="bio-curso">
       <div class="course-label">Inscrições abertas</div>
       <h2>Introdução Alimentar Sem Segredos</h2>
       <p>Do primeiro papá ao prato completo, sem medo de engasgo e sem dúvida na hora de oferecer cada alimento.</p>
@@ -423,7 +423,7 @@
   <section class="section">
     <div class="section-label">Consulta 1:1 com a Cibely</div>
     <a href="https://wa.me/5511977242242?text=Oi%20Cibely%2C%20gostaria%20de%20agendar%20uma%20consulta%20online"
-       class="btn btn-primary">
+       class="btn btn-primary" data-goatcounter-click="bio-consulta-online">
       <span class="icon" aria-hidden="true">💻</span>
       <span class="label">
         Consulta online
@@ -432,7 +432,7 @@
       <span class="arrow" aria-hidden="true">→</span>
     </a>
     <a href="https://wa.me/5511977242242?text=Oi%20Cibely%2C%20gostaria%20de%20agendar%20uma%20consulta%20presencial"
-       class="btn">
+       class="btn" data-goatcounter-click="bio-consulta-presencial">
       <span class="icon" aria-hidden="true">📍</span>
       <span class="label">
         Consulta presencial
@@ -440,14 +440,14 @@
       </span>
       <span class="arrow" aria-hidden="true">→</span>
     </a>
-    <p class="map-link"><a href="https://share.google/5yCm9xcrLLRjgTITC" target="_blank" rel="noopener">📍 Ver o consultório no Google Maps</a></p>
+    <p class="map-link"><a href="https://share.google/5yCm9xcrLLRjgTITC" target="_blank" rel="noopener" data-goatcounter-click="bio-maps">📍 Ver o consultório no Google Maps</a></p>
   </section>
 
   <!-- ===== PROVA SOCIAL ===== -->
   <section class="section">
     <div class="section-label">Histórias reais</div>
     <a href="https://nutrirparacrescer.com.br/?utm_source=linkbio&utm_medium=instagram&utm_campaign=depoimentos#depoimentos"
-       class="btn">
+       class="btn" data-goatcounter-click="bio-depoimentos">
       <span class="icon" aria-hidden="true">💚</span>
       <span class="label">
         O que dizem as mães
@@ -460,7 +460,7 @@
   <!-- ===== CONTEÚDO GRATUITO ===== -->
   <section class="section">
     <div class="section-label">Conteúdo gratuito</div>
-    <a href="https://www.youtube.com/@nutricibely" class="btn">
+    <a href="https://www.youtube.com/@nutricibely" class="btn" data-goatcounter-click="bio-youtube">
       <span class="icon" aria-hidden="true">▶</span>
       <span class="label">
         Canal no YouTube
@@ -473,7 +473,7 @@
   <!-- ===== MAIS ===== -->
   <section class="section">
     <div class="section-label">Mais</div>
-    <a href="https://nutricibely.com.br/?utm_source=linkbio&utm_medium=instagram" class="btn">
+    <a href="https://nutricibely.com.br/?utm_source=linkbio&utm_medium=instagram" class="btn" data-goatcounter-click="bio-site-cibely">
       <span class="icon" aria-hidden="true">🩺</span>
       <span class="label">
         Site da Cibely
@@ -481,7 +481,7 @@
       </span>
       <span class="arrow" aria-hidden="true">→</span>
     </a>
-    <a href="https://nutrirparacrescer.com.br/?utm_source=linkbio&utm_medium=instagram" class="btn">
+    <a href="https://nutrirparacrescer.com.br/?utm_source=linkbio&utm_medium=instagram" class="btn" data-goatcounter-click="bio-site-curso">
       <span class="icon" aria-hidden="true">🌱</span>
       <span class="label">
         Site Nutrir para Crescer
@@ -489,7 +489,7 @@
       </span>
       <span class="arrow" aria-hidden="true">→</span>
     </a>
-    <a href="https://www.instagram.com/nutricibely/" class="btn">
+    <a href="https://www.instagram.com/nutricibely/" class="btn" data-goatcounter-click="bio-instagram">
       <span class="icon" aria-hidden="true">📷</span>
       <span class="label">@nutricibely no Instagram</span>
       <span class="arrow" aria-hidden="true">→</span>
@@ -514,10 +514,12 @@
       if(enviado){
         document.getElementById('lead-form-wrapper').style.display = 'none';
         document.getElementById('leadSuccess').style.display = 'block';
+        if(window.goatcounter){ window.goatcounter.count({path:'bio-lead-aula-gratis', title:'Cadastro na lista (bio)', event:true}); }
       }
     });
   })();
 </script>
+<script data-goatcounter="https://nutrirparacrescer.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html>

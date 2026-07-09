@@ -148,10 +148,12 @@
           form.style.display = 'none';
           document.querySelector('.nota').style.display = 'none';
           document.getElementById('msg-sucesso').style.display = 'block';
+          if(window.goatcounter){ window.goatcounter.count({path:'landing-lead-aula-gratis', title:'Cadastro na lista (landing)', event:true}); }
         }
       });
     })();
   </script>
+  <script data-goatcounter="https://nutrirparacrescer.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html>
