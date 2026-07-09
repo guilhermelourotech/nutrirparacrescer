@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Página de link da bio: não indexar (não deve competir com o site na busca) -->
+<meta name="robots" content="noindex">
+
+<title>Cibely Ito | Nutricionista Materno-Infantil</title>
+<meta name="description" content="Te ajudo a alimentar seu bebê sem medo, sem briga e com nutrição de verdade. Curso de Introdução Alimentar, aula gratuita e conteúdos.">
+
+<meta property="og:title" content="Cibely Ito | Nutri Materno-Infantil">
+<meta property="og:description" content="Curso de Introdução Alimentar, aula gratuita e conteúdos para alimentar seu bebê sem medo.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nutrirparacrescer.com.br/instagram/">
+<meta property="og:image" content="https://nutrirparacrescer.com.br/images/cibely.webp">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+
+<style>
+  :root {
+    --c-cream: #F5EFE6;
+    --c-cream-dark: #EAE0D0;
+    --c-rose: #C97B84;
+    --c-rose-dark: #B36770;
+    --c-wine: #5B3A4E;
+    --c-wine-dark: #3F2837;
+    --c-sage: #9CAE9D;
+    --c-sage-dark: #7B8E7C;
+    --c-text: #3A2B33;
+    --c-muted: #7B6770;
+    --c-white: #FFFFFF;
+    --c-shadow: 0 4px 18px rgba(91, 58, 78, 0.10);
+    --c-shadow-hover: 0 8px 24px rgba(91, 58, 78, 0.18);
+    --radius: 999px;
+    --radius-card: 18px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    background: var(--c-cream);
+    color: var(--c-text);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 24px 20px 40px;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero { text-align: center; margin-bottom: 28px; }
+
+  .photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 16px;
+    border: 4px solid var(--c-white);
+    box-shadow: var(--c-shadow);
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--c-wine);
+    letter-spacing: -0.3px;
+    margin-bottom: 4px;
+  }
+
+  .hero .role {
+    font-size: 15px;
+    color: var(--c-rose);
+    font-weight: 500;
+    margin-bottom: 14px;
+    letter-spacing: 0.2px;
+  }
+
+  .hero .tagline {
+    font-size: 15px;
+    color: var(--c-muted);
+    line-height: 1.55;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  /* ---------- Seções ---------- */
+  .section { margin-top: 32px; }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--c-muted);
+    margin-bottom: 12px;
+    padding-left: 4px;
+  }
+
+  /* ---------- Aula grátis (captura) ---------- */
+  .lead-card {
+    background: var(--c-white);
+    border-radius: var(--radius-card);
+    padding: 22px 22px 20px;
+    box-shadow: var(--c-shadow);
+    border: 1px solid var(--c-cream-dark);
+  }
+
+  .lead-card .badge {
+    display: inline-block;
+    background: var(--c-sage);
+    color: var(--c-white);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: var(--radius);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+
+  .lead-card h2 {
+    font-size: 20px;
+    color: var(--c-wine);
+    margin-bottom: 6px;
+    line-height: 1.25;
+  }
+
+  .lead-card p {
+    font-size: 14px;
+    color: var(--c-muted);
+    margin-bottom: 16px;
+  }
+
+  .lead-form { display: flex; flex-direction: column; gap: 10px; }
+
+  .lead-form input[type="email"],
+  .lead-form input[type="text"],
+  .lead-form input[type="tel"] {
+    padding: 14px 16px;
+    border: 1.5px solid var(--c-cream-dark);
+    border-radius: 12px;
+    font-size: 15px;
+    color: var(--c-text);
+    font-family: inherit;
+    background: var(--c-cream);
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .lead-form input:focus {
+    outline: none;
+    border-color: var(--c-rose);
+    background: var(--c-white);
+  }
+
+  .lead-form .btn-submit {
+    background: var(--c-sage);
+    color: var(--c-white);
+    border: none;
+    padding: 14px 16px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s, transform 0.1s;
+  }
+
+  .lead-form .btn-submit:hover { background: var(--c-sage-dark); }
+  .lead-form .btn-submit:active { transform: scale(0.98); }
+
+  .consent {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    font-size: 11.5px;
+    color: var(--c-muted);
+    cursor: pointer;
+    text-align: left;
+  }
+  .consent input { margin-top: 2px; accent-color: var(--c-rose); }
+  .consent a { color: var(--c-rose); }
+
+  .lead-success { display: none; text-align: center; padding: 12px 0; }
+  .lead-success h3 { color: var(--c-wine); font-size: 17px; margin-bottom: 6px; }
+  .lead-success p { font-size: 14px; color: var(--c-muted); }
+
+  /* ---------- Curso ---------- */
+  .course-card {
+    display: block;
+    background: linear-gradient(135deg, var(--c-wine) 0%, var(--c-wine-dark) 100%);
+    color: var(--c-white);
+    border-radius: var(--radius-card);
+    padding: 22px;
+    box-shadow: var(--c-shadow);
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.2s;
+  }
+
+  .course-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--c-shadow-hover);
+  }
+
+  .course-card .course-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    opacity: 0.7;
+    margin-bottom: 8px;
+  }
+
+  .course-card h2 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .course-card p {
+    font-size: 14px;
+    opacity: 0.85;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+
+  .course-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--c-white);
+    color: var(--c-wine);
+    padding: 10px 16px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  /* ---------- Botões ---------- */
+  .btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: var(--c-white);
+    color: var(--c-wine);
+    border: 1.5px solid var(--c-cream-dark);
+    border-radius: var(--radius-card);
+    padding: 16px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: transform 0.15s, box-shadow 0.2s, border-color 0.2s;
+    text-align: left;
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  .btn:last-child { margin-bottom: 0; }
+
+  .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--c-shadow);
+    border-color: var(--c-rose);
+  }
+
+  .btn .icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--c-cream);
+    border-radius: 50%;
+    margin-right: 12px;
+    font-size: 16px;
+  }
+
+  .btn .label { flex: 1; line-height: 1.3; }
+
+  .btn .label small {
+    display: block;
+    font-size: 12px;
+    color: var(--c-muted);
+    font-weight: 400;
+    margin-top: 2px;
+  }
+
+  .btn .arrow {
+    color: var(--c-muted);
+    font-size: 18px;
+    margin-left: 8px;
+    flex-shrink: 0;
+  }
+
+  .btn-primary {
+    background: var(--c-rose);
+    color: var(--c-white);
+    border-color: var(--c-rose);
+  }
+  .btn-primary .icon { background: rgba(255,255,255,0.18); color: var(--c-white); }
+  .btn-primary .label small { color: rgba(255,255,255,0.85); }
+  .btn-primary .arrow { color: rgba(255,255,255,0.8); }
+  .btn-primary:hover { background: var(--c-rose-dark); border-color: var(--c-rose-dark); }
+
+  /* ---------- Footer ---------- */
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--c-cream-dark);
+  }
+
+  .footer p { font-size: 13px; color: var(--c-muted); margin-bottom: 4px; }
+  .footer a { color: var(--c-wine); text-decoration: none; font-weight: 500; }
+  .footer a:hover { text-decoration: underline; }
+
+  a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 3px solid var(--c-rose);
+    outline-offset: 2px;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .page > * { animation: fadeUp 0.4s ease-out backwards; }
+  .page > *:nth-child(2) { animation-delay: 0.05s; }
+  .page > *:nth-child(3) { animation-delay: 0.1s; }
+  .page > *:nth-child(4) { animation-delay: 0.15s; }
+  .page > *:nth-child(5) { animation-delay: 0.2s; }
+  .page > *:nth-child(6) { animation-delay: 0.25s; }
+</style>
+</head>
+<body>
+
+<main class="page">
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <img src="../images/cibely.webp" alt="Cibely Ito, nutricionista materno-infantil" class="photo">
+    <h1>Cibely Ito</h1>
+    <p class="role">Nutricionista Materno-Infantil</p>
+    <p class="tagline">Te ajudo a alimentar seu bebê sem medo, sem briga e com nutrição de verdade.</p>
+  </header>
+
+  <!-- ===== AULA GRÁTIS (captura → Google Forms) ===== -->
+  <section class="section">
+    <div class="section-label">Comece por aqui — grátis</div>
+    <div class="lead-card">
+      <div id="lead-form-wrapper">
+        <span class="badge">Aula grátis</span>
+        <h2>Aula gratuita de Introdução Alimentar</h2>
+        <p>Entre na lista e seja avisada em primeira mão quando a aula for liberada — exclusiva para quem estiver na lista.</p>
+        <form class="lead-form" id="leadForm" action="https://docs.google.com/forms/d/e/1FAIpQLSf5_hrBWaJWvSB0HQ-dVeaftAwNBV72wIuiOvU0LccPDCa3ug/formResponse" method="POST" target="iframe-oculto">
+          <input type="text" name="entry.292821919" placeholder="Seu primeiro nome" required autocomplete="given-name" aria-label="Seu primeiro nome">
+          <input type="email" name="entry.904373471" placeholder="Seu melhor e-mail" required autocomplete="email" aria-label="Seu melhor e-mail">
+          <input type="tel" name="entry.1948208230" placeholder="WhatsApp com DDD" required autocomplete="tel" aria-label="WhatsApp com DDD">
+          <label class="consent">
+            <input type="checkbox" required>
+            <span>Aceito receber comunicações sobre a aula e o curso, conforme a <a href="../politica-privacidade.html" target="_blank">Política de Privacidade</a>.</span>
+          </label>
+          <button type="submit" class="btn-submit">Quero ser avisada da aula</button>
+        </form>
+      </div>
+      <div class="lead-success" id="leadSuccess">
+        <h3>💚 Pronto! Você está na lista.</h3>
+        <p>Assim que a aula for liberada, você será a primeira a saber.</p>
+      </div>
+      <iframe name="iframe-oculto" id="iframe-oculto" style="display:none"></iframe>
+    </div>
+  </section>
+
+  <!-- ===== CURSO ===== -->
+  <section class="section">
+    <div class="section-label">Curso completo</div>
+    <a href="https://nutrirparacrescer.com.br/?utm_source=linkbio&utm_medium=instagram&utm_campaign=curso_ia"
+       class="course-card">
+      <div class="course-label">Inscrições abertas</div>
+      <h2>Introdução Alimentar Sem Segredos</h2>
+      <p>Do primeiro papá ao prato completo, sem medo de engasgo e sem dúvida na hora de oferecer cada alimento.</p>
+      <span class="course-cta">Conhecer o curso →</span>
+    </a>
+  </section>
+
+  <!-- ===== CONSULTA (aguardando número do WhatsApp — remover comentário para ativar)
+  <section class="section">
+    <div class="section-label">Consulta 1:1 com a Cibely</div>
+    <a href="https://wa.me/55DDDNUMERO?text=Oi%20Cibely%2C%20gostaria%20de%20agendar%20uma%20consulta"
+       class="btn btn-primary">
+      <span class="icon" aria-hidden="true">💬</span>
+      <span class="label">
+        Agendar consulta
+        <small>Atendimento online · agendamento via WhatsApp</small>
+      </span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </section>
+  ===== -->
+
+  <!-- ===== CONTEÚDO GRATUITO ===== -->
+  <section class="section">
+    <div class="section-label">Conteúdo gratuito</div>
+    <a href="https://www.youtube.com/@nutricibely" class="btn">
+      <span class="icon" aria-hidden="true">▶</span>
+      <span class="label">
+        Canal no YouTube
+        <small>Vídeos sobre alimentação infantil</small>
+      </span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </section>
+
+  <!-- ===== MAIS ===== -->
+  <section class="section">
+    <div class="section-label">Mais</div>
+    <a href="https://nutrirparacrescer.com.br/?utm_source=linkbio&utm_medium=instagram" class="btn">
+      <span class="icon" aria-hidden="true">🌱</span>
+      <span class="label">Site Nutrir para Crescer</span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+    <a href="https://www.instagram.com/nutricibely/" class="btn">
+      <span class="icon" aria-hidden="true">📷</span>
+      <span class="label">@nutricibely no Instagram</span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>Cibely Ito · Nutricionista Materno-Infantil</p>
+    <p><a href="mailto:nutricibely@gmail.com">nutricibely@gmail.com</a> · São Paulo - SP</p>
+    <p><a href="../politica-privacidade.html">Política de Privacidade</a></p>
+  </footer>
+
+</main>
+
+<script>
+  (function(){
+    var form = document.getElementById('leadForm');
+    var enviado = false;
+    form.addEventListener('submit', function(){ enviado = true; });
+    document.getElementById('iframe-oculto').addEventListener('load', function(){
+      if(enviado){
+        document.getElementById('lead-form-wrapper').style.display = 'none';
+        document.getElementById('leadSuccess').style.display = 'block';
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
