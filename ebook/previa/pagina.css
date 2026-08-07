@@ -1,0 +1,131 @@
+/* CSS original do e-book, sem os @font-face embutidos (183 KB de fontes
+   em base64) — as famílias vêm do Google Fonts, que a landing já carrega. */
+:root{
+  --bg:#FBF7F4; --nude:#F7E8E1; --terra:#C0684E; --salvia:#7FA396;
+  --ink:#3A3230; --alert:#B4453A; --muted:#8B7B72; --salvia-tint:#EDF3F0;
+  --terra-tint:#F4E0D8; --hair:#E4D5CC;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#fff}
+body{font-family:'Source Sans 3',sans-serif;color:var(--ink);
+  -webkit-print-color-adjust:exact;print-color-adjust:exact}
+@page{size:A4;margin:0}
+.page{width:210mm;height:297mm;position:relative;background:var(--bg);
+  overflow:hidden;break-after:page;page-break-after:always;padding:22mm 20mm 20mm}
+.page--nude{background:var(--nude)}
+/* running head + folio */
+.rh{position:absolute;top:8.5mm;left:20mm;right:20mm;display:flex;
+  justify-content:space-between;align-items:baseline;
+  font-size:8pt;color:var(--muted);letter-spacing:.02em}
+.rh b{font-weight:600;color:var(--terra)}
+.rh::after{content:"";position:absolute;left:0;right:0;top:5.4mm;height:.35pt;background:var(--hair)}
+.folio{position:absolute;bottom:8.5mm;left:0;right:0;text-align:center;
+  font-size:8.5pt;color:var(--muted)}
+/* typography */
+h1.t{font-family:'Fraunces',serif;font-weight:600;font-size:21pt;line-height:1.18;
+  color:var(--terra);margin-bottom:7mm;max-width:150mm}
+h1.t .sub{display:block;font-family:'Source Sans 3';font-weight:400;font-size:11pt;
+  color:var(--muted);margin-top:2mm}
+.kicker{font-size:9pt;font-weight:600;color:var(--salvia);margin-bottom:1.5mm}
+.col{max-width:130mm}
+.col--wide{max-width:152mm}
+p{font-size:11.5pt;line-height:1.55;margin-bottom:4mm;text-align:left}
+.small p, p.small{font-size:10.5pt}
+strong{font-weight:600}
+em{font-style:italic}
+ul.b{list-style:none;margin:0 0 4mm}
+ul.b li{font-size:11.5pt;line-height:1.5;margin-bottom:2.6mm;padding-left:6mm;position:relative}
+ul.b li::before{content:"";position:absolute;left:0;top:.45em;width:2.4mm;height:2.4mm;
+  border-radius:50%;background:var(--terra)}
+ul.b--s li{font-size:10.8pt;margin-bottom:2mm}
+ol.n{margin:0 0 4mm;list-style:none;counter-reset:st}
+ol.n li{counter-increment:st;font-size:11.5pt;line-height:1.5;margin-bottom:3.2mm;
+  padding-left:9.5mm;position:relative}
+ol.n li::before{content:counter(st);position:absolute;left:0;top:.05em;width:6.2mm;height:6.2mm;
+  border-radius:50%;background:var(--terra);color:#fff;font-weight:600;font-size:10pt;
+  display:flex;align-items:center;justify-content:center}
+/* blocks */
+.callout{background:var(--nude);border-radius:10px;padding:5mm 6mm;margin:0 0 4.5mm;
+  border-left:1.2mm solid var(--terra)}
+.callout p:last-child,.callout ul:last-child{margin-bottom:0}
+.callout--salvia{background:var(--salvia-tint);border-left-color:var(--salvia)}
+.callout--alert{background:#F9EAE7;border-left-color:var(--alert)}
+.callout .ttl{font-weight:600;color:var(--terra);font-size:11pt;margin-bottom:1.5mm}
+.callout--salvia .ttl{color:#5D8073}
+.callout--alert .ttl{color:var(--alert)}
+.page--nude .callout{background:#FDF6F1}
+/* tables */
+table.tb{width:100%;border-collapse:separate;border-spacing:0;margin-bottom:4.5mm;
+  border-radius:9px;overflow:hidden;font-size:10.3pt}
+table.tb th{background:var(--salvia);color:#fff;font-weight:600;text-align:left;
+  padding:2.8mm 3.5mm;font-size:10pt}
+table.tb td{padding:2.5mm 3.5mm;background:#fff;vertical-align:top;line-height:1.4}
+table.tb tr:nth-child(even) td{background:var(--salvia-tint)}
+table.tb td.hd{background:var(--terra-tint);font-weight:600;color:#8A4632;width:30mm}
+table.tb tr:nth-child(even) td.hd{background:#EFD8CE}
+/* figures */
+.fig{border-radius:8px;overflow:hidden;line-height:0}
+.fig img{width:100%;display:block}
+.fig--plain{border-radius:8px}
+.figrow{display:flex;gap:4mm;margin-bottom:4mm}
+.figrow .fig{flex:1}
+.circ{border-radius:50%;overflow:hidden;aspect-ratio:1/1}
+.circ img{width:100%;height:100%;object-fit:cover;display:block}
+.cap{font-size:9pt;font-style:italic;color:var(--muted);margin-top:1.8mm;line-height:1.35}
+.photocard{background:#fff;border-radius:8px;padding:3mm;box-shadow:none;border:.4pt solid var(--hair)}
+/* brand footnote */
+.brandnote{position:absolute;bottom:14mm;left:20mm;right:20mm;font-size:8.3pt;font-style:italic;
+  color:var(--muted);border-top:.35pt solid var(--hair);padding-top:1.6mm}
+/* checklist */
+.check{list-style:none;margin:0 0 4mm}
+.check li{display:flex;gap:4mm;align-items:flex-start;background:#fff;border:.4pt solid var(--hair);
+  border-radius:9px;padding:4.5mm 5mm;margin-bottom:3.5mm;font-size:11.5pt;line-height:1.5}
+.check .box{flex:0 0 auto;width:5.5mm;height:5.5mm;border:1.6pt solid var(--salvia);
+  border-radius:2mm;margin-top:.6mm}
+/* module opener */
+.opener-num{font-family:'Fraunces',serif;font-weight:700;font-size:64pt;color:var(--terra);
+  opacity:.28;line-height:1}
+.opener-kick{font-size:11pt;font-weight:600;color:var(--terra);margin:4mm 0 2mm}
+.opener-title{font-family:'Fraunces',serif;font-weight:600;font-size:34pt;line-height:1.12;
+  color:var(--ink);max-width:150mm;margin-bottom:8mm}
+.opener-list{list-style:none;max-width:120mm}
+.opener-list li{font-size:11.5pt;padding:2.6mm 0;border-bottom:.35pt solid #E7D2C6;color:var(--ink)}
+.opener-bar{position:absolute;left:0;top:0;bottom:0;width:5mm;background:var(--terra)}
+/* toc */
+.toc{list-style:none;max-width:150mm}
+.toc>li{margin-bottom:4.5mm}
+.toc .m{display:flex;justify-content:space-between;align-items:baseline;
+  font-family:'Fraunces',serif;font-weight:600;font-size:13.5pt;color:var(--terra)}
+.toc .m .pg{font-family:'Source Sans 3';font-size:10.5pt;color:var(--muted);font-weight:400}
+.toc .subs{list-style:none;margin-top:1.6mm}
+.toc .subs li{display:flex;justify-content:space-between;font-size:10.3pt;color:var(--ink);
+  padding:1mm 0 1mm 5mm;border-bottom:.3pt dotted var(--hair)}
+.toc .subs .pg{color:var(--muted)}
+/* cover */
+.page--cover{background:#FBEBE3;padding:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center}
+.cover-title{font-family:'Fraunces',serif;font-weight:600;font-size:34pt;line-height:1.15;
+  color:var(--ink);max-width:150mm}
+.cover-sub{font-size:12pt;color:var(--terra);font-weight:600;margin-top:6mm}
+.cover-author{font-family:'Fraunces',serif;font-style:italic;font-size:13pt;color:var(--ink);
+  margin-top:14mm}
+.cover-tag{font-size:10pt;color:var(--muted);margin-top:2mm}
+/* CTA */
+.cta-card{background:#fff;border:.4pt solid var(--hair);border-radius:12px;
+  padding:6mm 7mm;margin-bottom:5mm}
+.cta-card .h{font-family:'Fraunces',serif;font-weight:600;font-size:14pt;color:var(--terra);
+  margin-bottom:1.6mm}
+.cta-card p{margin-bottom:1.6mm;font-size:10.8pt}
+.cta-card .lk{font-size:9.6pt;color:var(--salvia);font-weight:600;word-break:break-all}
+.price{display:inline-block;background:var(--terra-tint);color:#8A4632;font-weight:600;
+  border-radius:4mm;padding:.6mm 3.2mm;font-size:10pt;margin-left:1.6mm}
+/* misc */
+.spacer{height:5mm}
+.rule{height:.35pt;background:var(--hair);margin:5mm 0}
+.two{display:flex;gap:7mm}
+.two>div{flex:1}
+.pill{display:inline-block;background:var(--salvia-tint);color:#527266;font-weight:600;
+  font-size:9.5pt;border-radius:4mm;padding:.8mm 3.5mm;margin:0 1mm 1.5mm 0}
+.bigicon{font-family:'Fraunces',serif;font-weight:700;font-size:30pt;color:var(--alert)}
+.placeholder{background:#FFF3C4;border:1.2pt dashed #D3A73C;border-radius:6px;
+  padding:2mm 3mm;color:#7A5E12;font-size:10pt;font-style:italic}

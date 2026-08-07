@@ -223,6 +223,16 @@
     .previa-grid .photocard{flex:0 0 72%;scroll-snap-align:center}
     .previa-dica{font-size:14.5px;color:var(--legenda);margin-top:10px}
 
+    /* A página do e-book é A4 a 96dpi (794×1123). O iframe é renderizado nesse
+       tamanho e reduzido por transform; --esc é calculado no JS a partir da
+       largura real do cartão. O valor abaixo é só o palpite inicial, para não
+       piscar em tela grande antes do script rodar. */
+    .previa .moldura{position:relative;width:100%;aspect-ratio:794/1123;
+                     overflow:hidden;border-radius:4px;background:var(--branco)}
+    .previa iframe{position:absolute;top:0;left:0;width:794px;height:1123px;border:0;
+                   transform-origin:top left;transform:scale(var(--esc,.34));
+                   pointer-events:none}
+
     /* ---------- Autora ---------- */
     .autora-grid{display:grid;gap:20px}
     .autora-foto{max-width:220px}
@@ -486,24 +496,31 @@
         <h2>Como o material é por dentro</h2>
         <p>Três páginas reais do e-book.</p>
       </div>
+      <!-- Páginas reais do e-book, servidas de /ebook/previa/ dentro de iframes.
+           Não são prints: é o documento de verdade, escalado para caber no cartão.
+           Vantagem: nítido em qualquer tela e sempre igual ao PDF que a leitora recebe.
+           O iframe tem pointer-events:none para não capturar o arraste do carrossel. -->
       <div class="previa-grid">
-        <!-- PLACEHOLDER 1: página de CORTES E TEXTURAS (módulo 4) — a mais visual, com as fotos dos formatos por fase -->
-        <figure class="photocard" data-vazio="Prévia 1 — página de cortes e texturas">
-          <img src="../images/previa-ebook-cortes.webp" width="1000" height="1414" loading="lazy"
-               alt="Página do e-book com os cortes e texturas dos alimentos recomendados em cada fase">
-          <figcaption>Cortes e texturas, fase por fase</figcaption>
+        <figure class="photocard previa">
+          <div class="moldura">
+            <iframe src="previa/p33.html" loading="lazy" scrolling="no" tabindex="-1"
+                    title="Página 33 do e-book: como ler os cartões de corte, do bastão à pinça"></iframe>
+          </div>
+          <figcaption>Página 33 · cortes e texturas</figcaption>
         </figure>
-        <!-- PLACEHOLDER 2: página de GAG x ENGASGO (módulo 3) — o quadro comparativo -->
-        <figure class="photocard" data-vazio="Prévia 2 — página de gag x engasgo">
-          <img src="../images/previa-ebook-gag.webp" width="1000" height="1414" loading="lazy"
-               alt="Página do e-book comparando o reflexo de gag e o engasgo, com o que observar em cada situação">
-          <figcaption>Gag x engasgo, lado a lado</figcaption>
+        <figure class="photocard previa">
+          <div class="moldura">
+            <iframe src="previa/p28.html" loading="lazy" scrolling="no" tabindex="-1"
+                    title="Página 28 do e-book: a diferença entre engasgo e reflexo de gag"></iframe>
+          </div>
+          <figcaption>Página 28 · engasgo e gag</figcaption>
         </figure>
-        <!-- PLACEHOLDER 3: página de MONTAGEM DO PRATO / grupos alimentares (módulo 4) -->
-        <figure class="photocard" data-vazio="Prévia 3 — página de montagem do prato">
-          <img src="../images/previa-ebook-prato.webp" width="1000" height="1414" loading="lazy"
-               alt="Página do e-book mostrando a montagem do prato por grupos alimentares">
-          <figcaption>Montagem do prato por grupos</figcaption>
+        <figure class="photocard previa">
+          <div class="moldura">
+            <iframe src="previa/p40.html" loading="lazy" scrolling="no" tabindex="-1"
+                    title="Página 40 do e-book: as porções no prato, divididas em terços"></iframe>
+          </div>
+          <figcaption>Página 40 · porções no prato</figcaption>
         </figure>
       </div>
       <p class="previa-dica">Arraste para o lado para ver as três páginas.</p>
@@ -797,7 +814,23 @@
     });
 
     /* =========================================================
-       Prévia: cartão vazio no lugar de imagem quebrada
+       Prévia: encaixa a página A4 do e-book na largura do cartão
+       ========================================================= */
+    var LARGURA_PAGINA = 794;
+    function ajustarPrevias(){
+      Array.prototype.forEach.call(document.querySelectorAll('.previa .moldura'), function(m){
+        var largura = m.clientWidth;
+        if(largura) m.querySelector('iframe').style.setProperty('--esc', largura / LARGURA_PAGINA);
+      });
+    }
+    ajustarPrevias();
+    window.addEventListener('resize', ajustarPrevias);
+    window.addEventListener('orientationchange', ajustarPrevias);
+    /* as fontes chegam depois e mudam a altura do cartão no desktop */
+    if(document.fonts && document.fonts.ready) document.fonts.ready.then(ajustarPrevias);
+
+    /* =========================================================
+       Cartão vazio no lugar de imagem quebrada
        ========================================================= */
     Array.prototype.forEach.call(document.querySelectorAll('.photocard img'), function(img){
       img.addEventListener('error', function(){
