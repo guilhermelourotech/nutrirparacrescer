@@ -367,31 +367,24 @@
     <p class="tagline">Te ajudo a alimentar seu bebê sem medo, sem briga e com nutrição de verdade.</p>
   </header>
 
-  <!-- ===== AULA GRÁTIS (captura → Google Forms) ===== -->
+  <!-- ===== GUIA GRÁTIS (download direto) + AULA (direct → ManyChat, palavra AULA) ===== -->
   <section class="section">
     <div class="section-label">Comece por aqui — grátis</div>
     <div class="lead-card">
       <div id="lead-form-wrapper">
-        <span class="badge">Aula ao vivo · grátis</span>
-        <h2>Aula ao vivo de Introdução Alimentar</h2>
-        <p><strong>Terça, 18/08, às 8h30.</strong> Ao vivo, gratuita e com espaço para tirar suas dúvidas na hora. Primeira turma.</p>
-        <form class="lead-form" id="leadForm" action="https://docs.google.com/forms/d/e/1FAIpQLSf5_hrBWaJWvSB0HQ-dVeaftAwNBV72wIuiOvU0LccPDCa3ug/formResponse" method="POST" target="iframe-oculto">
-          <input type="hidden" name="entry.218738770" value="bio-instagram">
-          <input type="text" name="entry.292821919" placeholder="Seu primeiro nome" required autocomplete="given-name" aria-label="Seu primeiro nome">
-          <input type="email" name="entry.904373471" placeholder="Seu melhor e-mail" required autocomplete="email" aria-label="Seu melhor e-mail">
-          <input type="tel" name="entry.1948208230" placeholder="WhatsApp com DDD" required autocomplete="tel" aria-label="WhatsApp com DDD">
-          <label class="consent">
-            <input type="checkbox" required>
-            <span>Aceito receber comunicações sobre a aula e o curso, conforme a <a href="../politica-privacidade.html" target="_blank">Política de Privacidade</a>.</span>
-          </label>
-          <button type="submit" class="btn-submit">Quero minha vaga na aula ao vivo</button>
-        </form>
+        <span class="badge">Guia grátis · PDF</span>
+        <h2>Guia da Primeira Semana</h2>
+        <p>12 páginas, um assunto por dia, para começar a introdução alimentar sem medo.</p>
+        <div class="lead-form">
+          <a class="btn-submit" id="btn-guia" href="/guia/Guia-da-Primeira-Semana.pdf" download data-goatcounter-click="bio-guia-download" style="display:block;text-align:center;text-decoration:none">Baixar o guia grátis</a>
+        </div>
+        <div class="depois-guia" id="depois-guia" hidden style="margin-top:18px;padding:16px;border-radius:14px;background:rgba(127,143,110,.12);text-align:left;font-size:15px;line-height:1.5">
+          <p style="margin:0 0 8px"><strong>💚 Seu guia está baixando.</strong> Próximos passos, se quiser:</p>
+          <p style="margin:0 0 6px">📅 <strong>Aula ao vivo e gratuita, todo mês:</strong> <a href="https://ig.me/m/nutricibely?ref=w58499106" data-goatcounter-click="bio-depois-aula" style="color:inherit;font-weight:700;text-decoration:underline">mande AULA no direct</a> e receba a data e o link do grupo.</p>
+          <p style="margin:0">💬 <strong>Consulta com a Cibely:</strong> <a href="https://wa.me/5511977242242?text=Oi%20Cibely%2C%20baixei%20o%20Guia%20da%20Primeira%20Semana%20e%20quero%20agendar%20uma%20consulta" data-goatcounter-click="bio-depois-consulta" style="color:inherit;font-weight:700;text-decoration:underline">chamar no WhatsApp</a>.</p>
+        </div>
+        <p class="link-aula" style="text-align:center;margin-top:14px;font-size:14.5px">Quer a aula ao vivo e gratuita? <a href="https://ig.me/m/nutricibely?ref=w58499106" data-goatcounter-click="bio-aula-direct" style="color:inherit;font-weight:700;text-decoration:underline">Mande AULA no direct →</a></p>
       </div>
-      <div class="lead-success" id="leadSuccess">
-        <h3>💚 Vaga garantida!</h3>
-        <p>Te espero na terça, 18/08, às 8h30 — você recebe o link de acesso antes de começar.</p>
-      </div>
-      <iframe name="iframe-oculto" id="iframe-oculto" style="display:none"></iframe>
     </div>
   </section>
 
@@ -487,24 +480,16 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <p>Cibely Akemi Ito · Nutricionista CRN3-64690</p>
-    <p><a href="mailto:nutricibely@gmail.com">nutricibely@gmail.com</a> · São Paulo - SP</p>
+    <p><a href="mailto:contato@nutricibely.com.br">contato@nutricibely.com.br</a> · São Paulo - SP</p>
     <p><a href="../politica-privacidade.html">Política de Privacidade</a></p>
   </footer>
 
 </main>
 
-<script>
+  <script>
   (function(){
-    var form = document.getElementById('leadForm');
-    var enviado = false;
-    form.addEventListener('submit', function(){ enviado = true; });
-    document.getElementById('iframe-oculto').addEventListener('load', function(){
-      if(enviado){
-        document.getElementById('lead-form-wrapper').style.display = 'none';
-        document.getElementById('leadSuccess').style.display = 'block';
-        if(window.goatcounter){ window.goatcounter.count({path:'bio-lead-aula-gratis', title:'Cadastro na lista (bio)', event:true}); }
-      }
-    });
+    var b = document.getElementById('btn-guia');
+    if(b){ b.addEventListener('click', function(){ document.getElementById('depois-guia').hidden = false; }); }
   })();
 </script>
 <script data-goatcounter="https://nutrirparacrescer.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
